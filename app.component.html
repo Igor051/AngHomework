@@ -1,0 +1,36 @@
+<input type="text" (input)="onInput($event)">
+
+<button (click)="onClick()">click</button>
+
+<br>
+
+{{clickValue}}
+<br>
+<br>
+<button (click)="showLogin()">Login</button>
+<button (click)="showRegister()">Register</button>
+
+<form action="" *ngIf="statusLogin">
+  <div>Logination</div>
+  <input type="text"><br>
+  <input type="text" style="margin-top: 10px">
+</form>
+
+<form action="" *ngIf="statusRegister">
+  <div>Registration</div>
+  <input type="text"><br>
+  <input type="text" style="margin-top: 10px">
+</form>
+
+<div *ngFor="let house of houses">
+  quadrature: {{house.quadrature}}
+  <br>
+  street: {{house.street}}
+  <br>
+  price: {{house.price}}
+  <br>
+  <br>
+
+
+</div>
+
